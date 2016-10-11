@@ -5,8 +5,8 @@ import java.text.DecimalFormat;
 public class Circle {
 	
 	double radius;
-	double circumference;
-	double area;
+	double circumference =  0;
+	double area =  0;
 	double pi = Math.PI;
 	public static int count = 0;
 

@@ -1,7 +1,7 @@
 package circle;
 
 import java.util.Scanner;
-//import CircumferenceLab.Circle;
+
 
 public class CircleApp {
 
@@ -9,7 +9,7 @@ public class CircleApp {
 		double radius = 0;
 		int count = 0;
 		String choice = "y";
-		Circle circle = new Circle(radius);
+		
 		
 		Scanner scan = new Scanner(System.in);
 		
@@ -17,15 +17,17 @@ public class CircleApp {
 		
 		while(choice.equalsIgnoreCase("y")) {
 			
-			System.out.println("Enter radius: ");
+			System.out.print("Enter radius: ");
 			radius = scan.nextDouble();
-			
-			System.out.println("Circumference: " + circle.getformattedCircumference());
-			System.out.println("Area: " + circle.getformattedArea());
+			Circle circle = new Circle(radius);
+			circle.getCircumference();
+			circle.getArea();
+	System.out.println("Circumference: " + circle.getFormattedCircumference());
+		System.out.println("Area: " + circle.getFormattedArea());
 		
-			count = circle.getObjectCount();
+		    count = Circle.getObjectCount();
 			
-			System.out.println("would you like to create another Circle? (y/n): ");
+			System.out.print("would you like to create another Circle? (y/n): ");
 			choice = scan.next();
 		}
 			System.out.println("Goodbye!");
